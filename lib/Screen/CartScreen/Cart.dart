@@ -70,7 +70,8 @@ class _CartState extends State<Cart> {
              Fluttertoast.showToast(
                                msg: "Item is deleted",
                                textColor: Colors.white,
-                               backgroundColor: Colors.greenAccent
+                              backgroundColor: Colors.black
+
                                 );
              int userid =186;
              int ? productid =response.cartmodel![index].product_id;
