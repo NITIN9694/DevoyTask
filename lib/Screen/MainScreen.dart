@@ -25,7 +25,7 @@ class _MainScreenState extends State<MainScreen> {
         title: Center(child: Text("Shop")),
         actions: [
           IconButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Cart(cart)));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Cart()));
             },
          icon: Icon(Icons.shopping_bag))
         ],
@@ -37,10 +37,8 @@ class _MainScreenState extends State<MainScreen> {
         ) ,
        ), 
         body: TabBarView(children: <Widget>[
-                ProductScreen((selectedProduct){
-                  cart.add(selectedProduct);
-                }),
-                Cart(cart),
+                ProductScreen(),
+                Cart(),
         ],)
         
       ),
