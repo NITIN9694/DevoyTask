@@ -1,4 +1,6 @@
 
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:softatechtask/Config/size.dart';
 import 'package:softatechtask/Model/ProductDataModel.dart';
@@ -122,6 +124,7 @@ class _ProductScreenState extends State<ProductScreen> {
                                 );
                                     int userid =186;
                                     int ? productid =response.productdatamodel![index].id;
+                                    log(productid.toString());
                                     final _addbutton =await Provider.of<ProductsProvider>(context,listen: false).additembutton(userid.toString(), productid.toString());
                                     setState(() {
                                       _addItem = _addbutton;

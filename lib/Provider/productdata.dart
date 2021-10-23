@@ -30,8 +30,7 @@ Future <List<ProductDataModel>?> getdataproduct(context)async{
   final response = await http.get(url);
 Map<String, dynamic> _map =json.decode(response.body);
     List _result= _map["data"];
-    log(_result.toString());
-    
+   
     productdatamodel =_result.map((jsonData) =>ProductDataModel.fromMap(jsonData) ).toList();
    
     loding = false;
@@ -48,7 +47,7 @@ body :{
 }
 );
 var data= response.body;
-print(data);
+
  String responseString =response.body;
  addcartitemFromJson(responseString);
  notifyListeners();
@@ -70,7 +69,6 @@ String responseString =response.body;
  notifyListeners();
 }
 
-
 Future<CartModel?>getprouctcart()async{
 // ignore: unused_local_variable
 cartloding= true;
@@ -83,7 +81,7 @@ body :{
 Map<String, dynamic> _map=json.decode(response.body);
 var data= response.body;
 List _result= _map["data"]["wishlist_info"];
-    log(_result.toString());
+  
    cartmodel =_result.map((jsonData) =>CartModel.fromMap(jsonData) ).toList();
     cartloding = false;
       notifyListeners();

@@ -73,12 +73,12 @@ class _CartState extends State<Cart> {
                               backgroundColor: Colors.black
 
                                 );
-             int userid =186;
+             int ?userid =response.cartmodel![index].user_id;
              int ? productid =response.cartmodel![index].product_id;
-            final _addbutton =await Provider.of<ProductsProvider>(context,listen: false).deletitembutton(186.toString(), productid.toString());
-              setState(() {
-                _deletItem = _addbutton;
-               
+             print(response.cartmodel![index].product_id.toString());
+            final _addbutton =await Provider.of<ProductsProvider>(context,listen: false).deletitembutton(userid.toString(), productid.toString());
+            setState(() {
+                _deletItem = _addbutton;               
                   });
                                 
                

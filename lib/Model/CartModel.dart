@@ -39,7 +39,7 @@ class CartModel{
   factory CartModel.fromMap(Map<String, dynamic> map) {
     return CartModel(
        id: map['id'],
-       product_id: map['nproduct_id'],
+       product_id: map['product_id'],
        user_id: map['user_id'],
        image: map['image'],
        retail_price: map['retail_price'],
