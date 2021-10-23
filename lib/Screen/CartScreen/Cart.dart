@@ -75,7 +75,7 @@ class _CartState extends State<Cart> {
                                 );
              int userid =186;
              int ? productid =response.cartmodel![index].product_id;
-            final _addbutton =await Provider.of<ProductsProvider>(context,listen: false).deletitembutton(186.toString(), 660.toString());
+            final _addbutton =await Provider.of<ProductsProvider>(context,listen: false).deletitembutton(186.toString(), productid.toString());
               setState(() {
                 _deletItem = _addbutton;
                
